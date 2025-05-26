@@ -1,0 +1,145 @@
+/* Header and nav */
+header h1 {
+  margin-bottom: 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+}
+section h2 {
+  color: #2b2d42;
+  margin-bottom: 20px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Forms and Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Body */
+body {
+  background: #f4f4f9;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Buttons */
+button {
+  background: #2b2d42;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background: #4a4e69;
+}
+
+/* Footer */
+footer {
+  background: #2b2d42;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+/* 🔧 Quiz */
+#quiz .quiz-question {
+  margin-bottom: 15px;
+}
+
+#quiz .quiz-question p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+#quiz label {
+  display: block;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#quiz input[type="radio"] {
+  margin-right: 8px;
+  vertical-align: middle;
+  transform: scale(1.1);
+}
+
+/* Responsive video and iframe */
+video, iframe {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Maintain YouTube 16:9 ratio */
+iframe[src*="youtube"] {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+/* Jitsi iframe height */
+#meeting iframe {
+  min-height: 500px;
+  height: 70vh;
+}
+
+/* Notepad */
+#notepad textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* PayPal */
+#paypal-button-container {
+  margin-top: 20px;
+}
+/* 🔧 Register section inputs */
+#register input {
+  width: 250px;
+  height: 32px;
+  font-size: 14px;
+  padding: 6px;
+  margin-bottom: 8px;
+}
+
+/* 🔧 Notes textarea */
+#notepad textarea {
+  width: 300px;
+  min-height: 100px;
+  font-size: 14px;
+  padding: 6px;
+  resize: vertical;
+}
+
