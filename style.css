@@ -1,145 +1,451 @@
-/* Header and nav */
-header h1 {
-  margin-bottom: 10px;
+<<<<<<< HEAD
+:root {
+  --primary-color: #2b2d42;
+  --hover-color: #4a4e69;
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --accent-color: #fff;
 }
+
+/* Base */
+body {
+  background: var(--bg-color);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0;
+}
+
 nav a {
-  color: #fff;
+  color: var(--accent-color);
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Forms */
+.form-box {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
 }
 
-/* Sections */
-section {
-  padding: 40px 0;
-  border-bottom: 1px solid #ddd;
-}
-section h2 {
-  color: #2b2d42;
-  margin-bottom: 20px;
-}
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Forms and Inputs */
-input, textarea {
+.form-box input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 8px 0;
+  font-size: 16px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-/* Body */
-body {
-  background: #f4f4f9;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Buttons */
-button {
-  background: #2b2d42;
-  color: #fff;
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
   border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 5px;
 }
+
 button:hover {
-  background: #4a4e69;
+  background: var(--hover-color);
 }
 
-/* Footer */
-footer {
-  background: #2b2d42;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
+/* Dashboard */
+#dashboard {
+  padding: 20px;
 }
-/* 🔧 Quiz */
+
+/* Notepad */
+#notepad {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#notes, #richEditor {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+#notes {
+  height: 300px;
+  resize: vertical;
+}
+
+#richEditor {
+  min-height: 300px;
+}
+
+/* Quiz */
 #quiz .quiz-question {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-#quiz .quiz-question p {
-  margin-bottom: 8px;
+#quiz p {
   font-weight: bold;
 }
 
 #quiz label {
   display: block;
-  margin-bottom: 6px;
-  cursor: pointer;
-  font-size: 16px;
+  margin: 8px 0;
 }
-
-#quiz input[type="radio"] {
-  margin-right: 8px;
-  vertical-align: middle;
-  transform: scale(1.1);
-}
-
-/* Responsive video and iframe */
 video, iframe {
   width: 100%;
-  max-width: 100%;
+  height: auto; /* ✅ Ensures video scales properly */
+  aspect-ratio: 16 / 9; /* ✅ Maintains widescreen shape */
+  border-radius: 8px;
   border: none;
   margin-top: 10px;
+  display: block; /* ✅ Helps avoid spacing issues */
+}
+/* Footer */
+footer {
+  background: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #00bfff;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.dark-mode button {
+  background-color: #555;
+}
+
+.dark-mode .quiz-question {
+  background-color: #333;
+  border-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+<style>
+footer a {
+  transition: color 0.3s, transform 0.3s;
+}
+footer a:hover {
+  color: #FF0000; /* YouTube red */
+  transform: scale(1.1);
+}
+</style>
+<style>
+@media (max-width: 600px) {
+  footer div {
+    text-align: center;
+  }
+  footer a img {
+    margin: 10px auto;
+  }
+}
+</style>
+
+
+=======
+:root {
+  --primary-color: #2b2d42;
+  --hover-color: #4a4e69;
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --accent-color: #fff;
+}
+
+/* Base */
+body {
+  background: var(--bg-color);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0;
+}
+
+nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Forms */
+.form-box {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 16px;
   border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-/* Maintain YouTube 16:9 ratio */
-iframe[src*="youtube"] {
-  aspect-ratio: 16 / 9;
-  height: auto;
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* Jitsi iframe height */
-#meeting iframe {
-  min-height: 500px;
-  height: 70vh;
+button:hover {
+  background: var(--hover-color);
+}
+
+/* Dashboard */
+#dashboard {
+  padding: 20px;
 }
 
 /* Notepad */
-#notepad textarea {
-  min-height: 150px;
+#notepad {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#notes, #richEditor {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+#notes {
+  height: 300px;
   resize: vertical;
 }
 
-/* PayPal */
-#paypal-button-container {
-  margin-top: 20px;
-}
-/* 🔧 Register section inputs */
-#register input {
-  width: 250px;
-  height: 32px;
-  font-size: 14px;
-  padding: 6px;
-  margin-bottom: 8px;
+#richEditor {
+  min-height: 300px;
 }
 
-/* 🔧 Notes textarea */
-#notepad textarea {
-  width: 300px;
-  min-height: 100px;
-  font-size: 14px;
-  padding: 6px;
-  resize: vertical;
+/* Quiz */
+#quiz .quiz-question {
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
+#quiz p {
+  font-weight: bold;
+}
+
+#quiz label {
+  display: block;
+  margin: 8px 0;
+}
+video, iframe {
+  width: 100%;
+  height: auto; /* ✅ Ensures video scales properly */
+  aspect-ratio: 16 / 9; /* ✅ Maintains widescreen shape */
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  display: block; /* ✅ Helps avoid spacing issues */
+}
+/* Footer */
+footer {
+  background: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #00bfff;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.dark-mode button {
+  background-color: #555;
+}
+
+.dark-mode .quiz-question {
+  background-color: #333;
+  border-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+<style>
+footer a {
+  transition: color 0.3s, transform 0.3s;
+}
+footer a:hover {
+  color: #FF0000; /* YouTube red */
+  transform: scale(1.1);
+}
+</style>
+<style>
+@media (max-width: 600px) {
+  footer div {
+    text-align: center;
+  }
+  footer a img {
+    margin: 10px auto;
+  }
+}
+</style>
+
+
+>>>>>>> ad9260e2a9e414a8590fadbf4af30857af92274b
